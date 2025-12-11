@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+/*
+ * simple navigation bar
+ * global stylings
+*/
+* {
+    font-family: "Rubik", sans-serif !important;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size:16px;
+}
+h1, h2, h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+}
+p {
+   font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+a{
+  color: black;
+  
+}
+/*
+ *working on the navigation bar of the school website homepage
+*/
+#navigation{
+  z-index: 10;
+  position: sticky;
+  background-color: whitesmoke ;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.041);
+}
+#nav_bar{
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+#navigation_list {
+   flex: 0.5 1 26rem;
+  ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+ 
+}
+#menu_button{
+  color: #F6C343;
+  font-size: 30px;
+}
+#nav_button{
+  border-radius: 20px;
+  background-color:#F6C343;
+  border: none;
+  padding: 0.8rem 3rem;
+  color: white;
+}
+#nav_button_parent{
+  padding-left: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 0.5 1 26rem;
+  a{
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+  }
+}
+/* HEADER SECTION */
+.services_header {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+.services_header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #F6C343;
+}
+
+/* SERVICE CARDS */
+.services_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.service_card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.service_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.service_card h3 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+/* CTA SECTION */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background: #003366;
+    color: white;
+    margin-top: 30px;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta_btn {
+    background: white;
+    color: #003366;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta_btn:hover {
+    background: #e0e0e0;
+}
+/*
+ *working on the footer section of the website
+ *the copyright section 
+*/
+
+#footer_child{
+    min-height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+    margin: auto;
+    flex-direction: column;
+    li{
+        list-style: none;
+    }  
+}
+#footer{
+    background-color:  #ECF0F1;
+    
+}
+#first_child{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 3rem 0rem ;
+}
+.b_list{
+    display: flex;
+    flex: 1 1 26rem;
+    justify-content: space-between;
+}
+.f_list1{
+    flex: 4 1 26rem;
+    h3{
+      color: #F6C343;
+      font-size: 50px;
+    }
+}
+.f_list2{
+    padding-left: 8rem;
+    
+}
+.f_list3{
+    padding-right: 2rem;
+}
+.b_list ul{
+    line-height: 22px;
+}
+.second_child{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0rem;
+}
+.f_list4{
+    flex:3 1 26rem ;
+    
+    button{
+        padding: 0.3rem 1rem ;
+        font-size: 12px;
+        background-color: #F6C343;
+        color: #ECF0F1;
+        border: none;
+        border-radius: 8px;
+    }
+}
+.f_list5{
+    flex:1 1 26rem ;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    span{
+      color: #F6C343;
+      font-size: 16px;
+      font-style: bold;
+    }
+    a{
+      font-size: 14px;
+    }
+}
+
+/*adding a media query to our website*/
+@media (max-width:768px) {
+    #landing_page{
+        flex-wrap: wrap;
+        padding: 0rem;
+        justify-content: space-between;
+    }
+ 
+    #landing_image{
+        padding: 0rem;
+        height:300px ;
+        
+    }
+    #landing_card{
+        flex-wrap: wrap;
+        min-height: 25vh;
+    }
+    
+}
+@media (max-width:600px) {
+  #logo{
+    flex: 2 1 7rem;
+  }
+  #nav_bar{
+    flex-wrap: wrap;
+    
+  }
+
+  .menu_button{
+    flex: 1 1 0rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-left:10rem ;
+  }
+  
+  .nav_list{
+    flex-direction: column;
+    width: 100%;
+    padding:1rem ;
+    position: absolute;
+    top: 50px;
+    background-color: #ECF0F1;
+    left: 0;
+    display: none;
+  }
+  .nav_list.open{
+    display: flex;
+  }
+  #landing_message{
+    font-size: 12px;
+    padding: 0.5rem;
+    width: 100%;
+    margin: 0;
+    min-height: 40vh;
+  }
+  .menu_button{
+    display: inline;
+  }
+  #first_child{
+    flex-wrap: wrap;
+    padding: 0rem 0rem;
+  }
+  .f_list2{
+    padding-left: 0rem;
+  }
+  .f_list4{
+    button{
+        font-size: 9px;
+    }
+  }
+  .f_list5{
+    gap: 1rem;
+  }
+  .f_list3{
+    padding-right: 6rem;
+  }
+}

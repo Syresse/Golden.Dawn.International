@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+/*
+ * simple navigation bar
+ * global stylings
+*/
+* {
+    font-family: "Rubik", sans-serif !important;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size:16px;
+}
+h1, h2, h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+}
+p {
+   font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+a{
+  color: black;
+  
+}
+/*
+ *working on the navigation bar of the school website homepage
+*/
+#navigation{
+  z-index: 10;
+  position: sticky;
+  background-color: whitesmoke ;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.041);
+}
+#nav_bar{
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+#navigation_list {
+   flex: 0.5 1 26rem;
+  ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+ 
+}
+#menu_button{
+  color: #F6C343;
+  font-size: 30px;
+}
+#nav_button{
+  border-radius: 20px;
+  background-color:#F6C343;
+  border: none;
+  padding: 0.8rem 3rem;
+  color: white;
+}
+#nav_button_parent{
+  padding-left: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 0.5 1 26rem;
+  a{
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+  }
+}
+/*lamding site*/
+#landing_site{
+  min-height: 30vh;
+  display: flex;
+  width: 88%;
+  margin: auto;
+  display: flex;
+  padding-top: 3rem;
+
+}
+#landing_page_image img{
+  height: 100%;
+  width: 90%;
+  border-radius: 4px;
+}
+#landing_page_image{
+  padding: 0rem 1rem 0rem 4rem;
+  flex: 1 1 26rem;
+}
+#landing_page_message{
+  display: flex;
+  flex-direction: column; 
+  font-size: 14px;
+  flex: 2 1 20rem;
+  justify-content: start;
+  p{
+      padding: 0.7rem;
+      line-height: 30px;
+  }
+}
+h2{
+  color: #F6C343;
+  font-size: 13px;
+}
+h3{
+  font-size: 50px;
+  color: #F6C343;
+  font-weight: 600;
+  span{
+    font-size: 50px;
+    color: black;
+  }
+}
+#landing_message_buttons{
+  display: flex;
+  gap: 1rem;
+  padding-top: 2rem;
+
+}
+#lmb_1{
+  border-radius: 20px;
+  background-color:#F6C343;
+  border: none;
+  padding: 0.6rem 3rem;
+  color: white;
+ 
+}
+#lmb_2{
+  border-radius:20px;
+  background-color: white;
+  border:solid 1px #F6C343;
+  color: #F6C343;
+  padding: 0.6rem 3rem;
+  
+}
+/*adding some cards to make the page look nice*/
+#first_cards{
+  width: 88%;
+  margin: auto;
+  min-height: 40vh;
+  background-color: #fafeff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8rem;
+  
+}
+.fcard{
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.153);
+  height: 100px;
+  border-radius: 4.5px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.fcard1 {
+  min-height: 10vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(fp_image/fcard1_photo.jpg);
+ 
+  p{
+    color: white;
+    backdrop-filter: blur(1px);
+  }
+  
+}
+.fcard2 {
+  min-height: 10vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(fcard2_photo.jpg);
+  p{
+     color: white;
+    backdrop-filter: blur(1px);
+  }
+  
+}
+h4{
+  color:#edb80c;
+  backdrop-filter: blur(1px);
+}
+.fcard3{
+   min-height: 10vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(fp_image/lcard3_replacement.jpg);
+  p{
+     color: white;
+    backdrop-filter: blur(1px);
+  }
+}
+/*-Adding an announcement part to the landing site
+*/
+.announcements {
+  width: 88%;
+  margin: auto;
+  background: #f8f9fb;
+  padding: 40px 20px;
+  border-radius: 10px;
+  
+}
+
+.announcements h2 {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  font-size: 35px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.announcement_list {
+  display: grid;
+  gap: 20px;
+}
+
+.announcement_item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #F6C343;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.announcement_item h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+/*Adding more content*/
+.about_school {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  width: 88%;
+  margin: auto;
+  min-height: 75vh;
+}
+
+.about_content {
+  flex: 1;
+  min-width: 280px;
+  padding-bottom: 3rem;
+}
+
+.about_content h2 {
+  font-size: 45px;
+  padding-bottom: 1.5rem;
+  font-weight: 600;
+
+}
+
+.about_content p {
+  padding-bottom: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+.about_image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about_image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+/*making the testimonial part of the website home oage nice*/
+.testimonials {
+  width: 88%;
+  margin: auto;
+  min-height: 100vh;
+  text-align: center;
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 2rem 0rem;
+  h2{
+    font-size: 45px;
+    font-weight: 600;
+    
+  }
+}
+
+.testimonials h2 {
+  padding-bottom: 30px;
+  font-size: 28px;
+}
+
+.testimonials_container {
+  display: grid;
+  gap: 20px;
+}
+
+.testimonial_card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  border-left: 5px solid #F6C343;
+  h4{
+    font-size: 14px;
+    color: #F6C343;
+  }
+}
+
+.testimonial_text {
+  font-style: italic;
+  line-height: 1.6;
+  color: #444;
+  padding-bottom: 10px;
+}
+
+.testimonial_name {
+  font-weight: bold;
+  color: #222;
+}
+/* Extra-Curricular Activities Section */
+.activities {
+    padding: 50px 20px;
+    background: #f5f7fa;
+    text-align: center;
+    width: 88%;
+    margin: auto;
+    h2{
+      font-size: 45px;
+      font-weight: 600;
+    }
+    p{
+      padding: 1.5rem 0rem;
+      font-size: 14px;
+    }
+}
+
+.activities_itle {
+    font-size: 36px;
+    color: #F6C343;
+    padding-bottom: 10px;
+}
+
+.activities_subtitle {
+    font-size: 18px;
+    padding-bottom: 40px;
+    color: #555;
+}
+
+.activities_gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.activity_card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.activity_card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.activity_card:hover img {
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+
+.activity_info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    padding: 12px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.4s;
+}
+
+.activity_card:hover .activity-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*
+ *working on the footer section of the website
+ *the copyright section 
+*/
+
+#footer_child{
+    min-height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+    margin: auto;
+    flex-direction: column;
+    li{
+        list-style: none;
+    }  
+}
+#footer{
+    background-color:  #ECF0F1;
+    
+}
+#first_child{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 3rem 0rem ;
+}
+.b_list{
+    display: flex;
+    flex: 1 1 26rem;
+    justify-content: space-between;
+}
+.f_list1{
+    flex: 4 1 26rem;
+}
+.f_list2{
+    padding-left: 8rem;
+    
+}
+.f_list3{
+    padding-right: 2rem;
+}
+.b_list ul{
+    line-height: 22px;
+}
+.second_child{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0rem;
+}
+.f_list4{
+    flex:3 1 26rem ;
+    
+    button{
+        padding: 0.3rem 1rem ;
+        font-size: 12px;
+        background-color: #F6C343;
+        color: #ECF0F1;
+        border: none;
+        border-radius: 8px;
+    }
+}
+.f_list5{
+    flex:1 1 26rem ;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    span{
+      color: #F6C343;
+      font-size: 16px;
+      font-style: bold;
+    }
+    a{
+      font-size: 14px;
+    }
+}
+
+/*adding a media query to our website*/
+@media (max-width:768px) {
+    #landing_page{
+        flex-wrap: wrap;
+        padding: 0rem;
+        justify-content: space-between;
+    }
+ 
+    #landing_image{
+        padding: 0rem;
+        height:300px ;
+        
+    }
+    #landing_card{
+        flex-wrap: wrap;
+        min-height: 25vh;
+    }
+    
+}
+@media (max-width:600px) {
+  #logo{
+    flex: 2 1 7rem;
+  }
+  #nav_bar{
+    flex-wrap: wrap;
+    
+  }
+
+  .menu_button{
+    flex: 1 1 0rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-left:10rem ;
+  }
+  
+  .nav_list{
+    flex-direction: column;
+    width: 100%;
+    padding:1rem ;
+    position: absolute;
+    top: 50px;
+    background-color: #ECF0F1;
+    left: 0;
+    display: none;
+  }
+  .nav_list.open{
+    display: flex;
+  }
+  #landing_message{
+    font-size: 12px;
+    padding: 0.5rem;
+    width: 100%;
+    margin: 0;
+    min-height: 40vh;
+  }
+  .menu_button{
+    display: inline;
+  }
+  #first_child{
+    flex-wrap: wrap;
+    padding: 0rem 0rem;
+  }
+  .f_list2{
+    padding-left: 0rem;
+  }
+  .f_list4{
+    button{
+        font-size: 9px;
+    }
+  }
+  .f_list5{
+    gap: 1rem;
+  }
+  .f_list3{
+    padding-right: 6rem;
+  }
+}

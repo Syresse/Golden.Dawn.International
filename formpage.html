@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Dawn International</title>
+    <link rel="shortcut icon" href="fp_image - Copy/school_website_logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="formpage.css">
+</head>
+<body>
+
+    <!--creating the navigation bar of my school weebsite-->
+    <header id="navigation">
+        <nav id="nav_bar">
+            <div id="navigation_list">
+                <ul>
+                    <li ><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="services.html">Services</a></li>
+                
+                </ul>
+            </div>    
+            <div id="nav_button_parent">
+                <a href="sign-up.html">Sign up</a>
+                <i class="fa-solid fa-user"></i>
+                <a href="log_in_form.html" id="nav_button">Log in</a>
+            </div>
+        </nav>
+    </header>
+    <section id="form_parent">
+        <div id="form_child">
+            
+            
+            <form>
+                <h4>Golden Dawn International</h4>
+                <h2>Registration Form</h3>
+                <!--Student information-->
+                <div><h3>Essential Student Information</h3></div>
+                <div class="form_info">
+                    
+                    <div id="form_names">
+                        <label for="ward_firstname">First Name</label>
+                        <input type="text" placeholder="Your Ward`s First Name" name="ward_firstname"><br>
+                        <label for="ward_lastname">Last Name</label>
+                        <input type="text"  placeholder="Your Ward`s Last Name" name="ward_lastname">
+                    </div>
+                    <label for="date_birth">Date Of Birth</label>
+                    <input type="text" placeholder="MM//DD//YEAR" name="date_birth">
+                    <label for="gender">Ward`s Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <label for="grade">Grade/Class Applying For</label>
+                    <input type="text" name="grade">
+                </div>
+                <!--Parent information-->
+                <div><h3>Parent / Guardian Information</h3></div>
+                <div class="form_info">
+                        <label for="parent-name">Parent/Guardian Name</label>
+                        <input type="text" id="parent-name" name="parent-name" required />
+                        <label for="parent-email">Email</label><br>
+                        <input type="email" id="parent-email" name="parent-email" />
+                        <label for="parent-phone">Phone Number</label><br>
+                        <input type="tel" id="parent-phone" name="parent-phone" />
+                </div>
+                <!-- Address -->
+                <div><h3>Address Information</h3></div>
+                <div class="form_info">
+                    <label for="address">Home Address</label>
+                    <textarea id="address" name="address" rows="3"></textarea>
+                </div>
+                <!-- Document Upload -->
+                <div><h3>Document Upload</h3></div>
+                <div class="form_info">
+                    <label for="birth-cert">Birth Certificate</label>
+                    <input type="file" id="birth-cert" name="birth-cert" />
+                    <label for="student-photo">Student Photo</label>
+                    <input type="file" id="student-photo" name="student-photo" />
+                </div>
+                <label class="agree-box">
+                    <input type="checkbox" required>
+                    I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> 
+                    and <a href="terms.html" target="_blank">Terms & Conditions</a>.
+                </label>
+
+                <button type="submit"> SUBMIT</button>
+            </form>
+        </div>
+    </section>
+    <!--creating the footer section of the website-->
+      <footer id="footer">
+        <div id="footer_child">
+            <div id="first_child">
+                <div class="f_list1">
+                    <h3>Golden Dawn International</h3>
+                    <p>Excellence,our hallmark</p>
+                </div>
+                <div class="b_list">
+                    <ul class="f_list2 ">
+                                <li>WhatsApp</li>
+                                <li>Facebook</li>
+                                <li>X(Twitter)</li>
+                                <li>Instagram</li>
+                    </ul>
+                    <ul class="f_list3">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="courses.html">Courses</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="formpage.html">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="second_child">
+                <div class="f_list4  ">
+                    <button>All systems operational</button>
+                </div>
+                <div class="f_list5 ">
+                    <p> <span>©</span>2025 YesHub All rights reserved</p>
+                    <a href="privacy.html" target="_blank">Privacy Policy</a> 
+                    <a href="terms.html" target="_blank">Terms & Conditions</a>.
+                </div>
+            </div>
+    
+        </div>
+    </footer>
+    <script src="navbar.js"></script>
+</body>
+</html>
