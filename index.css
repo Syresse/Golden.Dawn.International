@@ -160,6 +160,20 @@ h3 span {
   gap: 1rem;
   padding-top: 2rem;
 }
+.learn_more_btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #F6C343;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.learn_more_btn:hover {
+  background-color: #e0b332;
+}
 
 #lmb_1 {
   border-radius: 20px;
