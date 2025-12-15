@@ -286,15 +286,11 @@ a{
   /* Fix large desktop paddings */
   #nav_button_parent {
     padding-left: 0;
+    gap: 0.2rem;
   }
 
   /* Allow flex items to wrap */
-  .b_list,
-  #first_child,
-  #nav_bar {
-    flex-wrap: wrap;
-  }
-
+  
  
 
 }

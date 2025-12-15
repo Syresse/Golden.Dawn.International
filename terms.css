@@ -259,7 +259,7 @@ a{
 }
 @media (max-width:600px) {
   #nav_toggle {
-    position: absolute;
+   
     opacity: 0;
     pointer-events: none;
   }
@@ -267,7 +267,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8rem;
+    gap: 8rem !important;
   }
 
   #menu_button {
@@ -303,4 +303,39 @@ a{
   #nav_toggle:checked ~ #navigation_list {
     display: block;
   }
+  /*fixing the layout*/
+   #navigation{
+    width: 100%;
+    margin: auto;
+  }
+  #navigation_list {
+    z-index: 999;
+  }
+  #nav_bar{
+    gap: 0;
+  }
+  #nav_button_parent{
+    padding-left: 3rem;
+  }
+  #nav_toggle{
+    padding-left: 3rem;
+  }
+  body{
+    width: fit-content;
+  }
+  #footer_child{
+    width: fit-content;
+  }
+  .b_list{
+    gap: 1rem;
+  }
+  #first_child{
+    
+    width: fit-content;
+  }
+  #second_child{
+    width: fit-content;
+  }
+  
+
 }

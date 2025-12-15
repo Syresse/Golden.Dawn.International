@@ -668,7 +668,7 @@ h4 {
   }
 
   /* Allow flex items to wrap */
-  .b_list,
+  
   #first_child{
     flex-wrap: wrap;
   }
@@ -716,7 +716,39 @@ h4 {
   #nav_button_parent {
     gap: 0.5rem;
   }
+  /* ===== FOOTER ===== */
+  #footer_child {
+    width: 100%;
+    padding-left: 0.8rem;
+  }
 
+  #first_child,
+  .second_child{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  #b_list{
+    gap: 0 !important;
+  }
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+  /* remove unwanted spacing in footer lists */
+  .b_list {
+    gap: 4rem;
+    justify-content: flex-start;
+  }
 
+  .b_list ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* remove leftover desktop padding */
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
 
 }

@@ -333,10 +333,12 @@ background: #F6C343;
     padding-left: 0.5rem;
   }
   .b_list{
-    gap: 3rem;
+    gap: 2rem;
   }
   #nav_button_parent{
     padding-left: 9rem;
     font-size: 16px;
   }
+  
+  
 }

@@ -12,6 +12,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 html{
     font-size:16px;
@@ -38,32 +39,27 @@ a{
   background-color: whitesmoke ;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.041);
 }
-#nav_bar{
-  min-height: 8vh;
+#nav_bar {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 88%;
   margin: auto;
 }
 .active{
   border-bottom: #003366 2px solid;
     
 }
-#navigation_list {
-   flex: 0.5 1 26rem;
-  ul{
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-  }
-  a{
-    text-decoration: none;
-  }
- 
+#navigation_list ul {
+  display: flex;
+  gap: 15rem;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+#navigation_list a {
+  text-decoration: none;
 }
 #nav_toggle{
   display: none;
@@ -79,17 +75,26 @@ a{
   padding: 0.8rem 3rem;
   color: white;
 }
-#nav_button_parent{
-  padding-left: 15rem;
+#nav_button_parent {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
-  flex: 0.5 1 26rem;
-  a{
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-  }
+  margin-left: auto; /* KEY LINE */
+  padding-left: 2rem;
+}
+#nav_button_parent a{
+  text-decoration: none;
+  align-self: center;
+}
+#navigation {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  
+}
+
+#menu_button {
+  position: relative;
+  z-index: 10000;
 }
 /* HEADER SECTION */
 .services_header {
@@ -97,6 +102,13 @@ a{
     padding: 60px 20px;
     background: white;
 }
+.services_header,
+.services_container,
+.cta {
+  max-width: 1200px;
+  margin: auto;
+}
+
 
 .services_header h1 {
     font-size: 40px;
@@ -187,6 +199,13 @@ a{
     flex: 1 1 26rem;
     justify-content: space-between;
 }
+.f_list3 a {
+  text-decoration: none;
+}
+.b_list {
+  justify-content: flex-start;
+  gap: 3rem;
+}
 .f_list1{
     flex: 4 1 26rem;
     h3{
@@ -253,62 +272,107 @@ a{
     }
 }
 @media (max-width:600px) {
-  #nav_toggle {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
-  #nav_bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8rem;
-  }
+/* ===== NAVBAR ===== */
+#nav_bar {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-  #menu_button {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-  }
+/* hide checkbox visually BUT keep it clickable */
+#nav_toggle {
+  position: absolute;
+  opacity: 0;
+  z-index: 1001;       /* above menu */
+  pointer-events: auto; /* 🔥 FIX: MUST be clickable */
+}
 
-  /* Keep CTA on the right */
-  #nav_button_parent {
-    display: flex;
-    padding-left: 0;
-  }
+/* show hamburger */
+#menu_button {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1002; /* above everything */
+}
 
-  /* Hide menu links by default */
-  #navigation_list {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: whitesmoke;
-    padding: 1rem 0;
-  }
+/* keep buttons on the right */
+#nav_button_parent {
+  padding-left: 0;
+  gap: 0.5rem;
+  display: flex;
+}
 
-  #navigation_list ul {
-    flex-direction: column;
-    padding-left: 1.2rem;
-    gap: 1rem;
-  }
+#nav_button_parent a {
+  text-decoration: none;
+  align-self: center;
+}
 
-  /* Toggle menu only */
-  #nav_toggle:checked ~ #navigation_list {
-    display: block;
-  }
-  /*fixing the layout*/
-   #nav_bar{
-    width: 100%;
-  }
-  #navigation_list {
-    z-index: 999;
-  }
+/* hide menu by default */
+#navigation_list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: whitesmoke;
+  padding: 1rem 0;
+  flex: none; /* IMPORTANT */
+  z-index: 999;
+}
+
+#navigation_list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1.5rem;
+}
+
+/* ✅ TOGGLE MENU (THIS NOW WORKS) */
+#nav_toggle:checked ~ #navigation_list {
+  display: block;
+}
+
+/* ===== SERVICES PAGE ===== */
+.services_header {
+  padding: 40px 1rem;
+}
+
+.services_header h1 {
+  font-size: 28px;
+}
+
+.services_container {
+  padding: 1.5rem 1rem;
+  gap: 16px;
+}
+
+.service_card {
+  padding: 20px;
+}
+
+/* ===== CTA ===== */
+.cta {
+  padding: 40px 1rem;
+}
+
+/* ===== FOOTER ===== */
+#footer_child {
+  width: 100%;
+  padding-left: 0.8rem;
+}
+
+#first_child,
+.second_child,
+.b_list {
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.f_list2,
+.f_list3 {
+  padding: 0;
+}
+
   
-  #first_cards{
-    width: 100%;
-    margin: auto;
-  }
- 
 }

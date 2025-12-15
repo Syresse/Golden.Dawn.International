@@ -327,4 +327,41 @@ button {
   #nav_toggle:checked ~ #navigation_list {
     display: block;
   }
+  /* ===== FOOTER ===== */
+  #footer_child {
+    width: 100%;
+    padding-left: 0.8rem;
+  }
+
+  #first_child,
+  .second_child{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  #b_list{
+    gap: 0 !important;
+  }
+  #b_list a{
+    text-decoration: none;
+  }
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+  /* remove unwanted spacing in footer lists */
+.b_list {
+  gap: 0;
+  justify-content: flex-start;
+}
+
+.b_list ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* remove leftover desktop padding */
+.f_list2,
+.f_list3 {
+  padding: 0;
+}
 }
