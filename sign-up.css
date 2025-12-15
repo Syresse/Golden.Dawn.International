@@ -61,9 +61,12 @@ a{
   }
  
 }
-#menu_button{
-  color: #F6C343;
-  font-size: 30px;
+#nav_toggle{
+  display: none;
+}
+#menu_button {
+  display: none;
+  cursor: pointer;
 }
 #nav_button{
   border-radius: 20px;
@@ -185,4 +188,83 @@ a{
 
 .login_text a:hover {
     text-decoration: underline;
+}
+/*mobile responsiveness*/
+@media (max-width:800) {
+    #nav_button_parent{
+      
+      gap: 2px;
+      a{
+        padding: 0rem 0rem;
+      }
+    }
+    #nav_button_parent a#nav_button {
+      padding: 0.3rem 0.5rem;
+    }
+    
+    #nav_button{
+      border-radius: 12px;
+    }
+}
+@media (max-width:600px) {
+   #nav_toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  #menu_button {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Keep CTA on the right */
+  #nav_button_parent {
+    display: flex;
+    padding-left: 0;
+  }
+
+  /* Hide menu links by default */
+  #navigation_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 1rem 0;
+  }
+
+  #navigation_list ul {
+    flex-direction: column;
+    padding-left: 1.2rem;
+    gap: 1rem;
+  }
+
+  /* Toggle menu only */
+  #nav_toggle:checked ~ #navigation_list {
+    display: block;
+  }
+  /*fixing the layout*/
+   #navigation{
+    width: 100%;
+    margin: auto;
+  }
+  #navigation_list {
+    z-index: 999;
+  }
+  #nav_bar{
+    gap: 0;
+  }
+  #nav_button_parent{
+    padding-left: 3rem;
+  }
+ 
 }

@@ -12,16 +12,23 @@
     <!--creating the navigation bar of my school weebsite-->
     <header id="navigation">
         <nav id="nav_bar">
+             <!-- Toggle checkbox -->
+            <input type="checkbox" id="nav_toggle">
+
+            <!-- Hamburger icon -->
+            <label for="nav_toggle" id="menu_button">
+            ☰
+            </label>
             <div id="navigation_list">
                 <ul>
-                    <li ><a href="index.html">Home</a></li>
+                    <li class="active" ><a href="index.html">Home</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="services.html">Services</a></li>
                 
                 </ul>
             </div>    
             <div id="nav_button_parent">
-                <a href="sign-up.html">Sign up</a>
+                <a href="sign-up.html" id="nav_button1">Sign up</a>
                 <i class="fa-solid fa-user"></i>
                 <a href="log_in_form.html" id="nav_button">Log in</a>
             </div>
@@ -32,12 +39,15 @@
         <section id="landing_site_parent">
             <div id="landing_site">
                 <div id="landing_page_message">
-                    <h2>ABOUT US</h2>
-                    <h3><span>We are the top</span><br>Learning Institution</h3>
-                    <p>If you`re looking for a place to give your ward the knowledge 
-                        and skills he needs to face the world and its challenges head
-                        on,Golden Dawn International is your best bet
-                    </p>
+                    <div id="landing_message_child">
+                        <h2>ABOUT US</h2>
+                        <h3><span>We are the top</span><br>Learning Institution</h3>
+                        <p>
+                            If you`re looking for a place to give your ward the knowledge 
+                            and skills he needs to face the world and its challenges head
+                            on,Golden Dawn International is your best bet
+                        </p>
+                    </div>
                     <div id="landing_message_buttons">
                         
                         <button id="lmb_1" onclick="window.location.href='formpage.html'">

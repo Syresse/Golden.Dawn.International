@@ -29,6 +29,9 @@ a{
   color: black;
   
 }
+ body {
+    overflow-x: hidden;
+  }
 /*
  *working on the navigation bar of the school website homepage
 */
@@ -61,10 +64,14 @@ a{
   }
  
 }
-#menu_button{
-  color: #F6C343;
-  font-size: 30px;
+#nav_toggle{
+  display: none;
 }
+#menu_button {
+  display: none;
+  cursor: pointer;
+}
+
 #nav_button{
   border-radius: 20px;
   background-color:#F6C343;
@@ -93,6 +100,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: "Rubik", sans-serif !important;
 }
 
 /* Login Box */
@@ -199,3 +207,95 @@ a{
 .signup_text a:hover {
     text-decoration: underline;
 }
+/*working on mobile responsiveness*/
+@media (max-width:768px) {
+    #nav_button_parent{
+      
+      gap: 0;
+      a{
+        padding: 0rem 0rem;
+      }
+    }
+    #nav_button_parent a#nav_button {
+      padding: 0.3rem 0.5rem;
+    }
+    #nav_button{
+      border-radius: 12px;
+    }
+  
+}
+@media (max-width:600px) {
+   #nav_toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  #menu_button {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Keep CTA on the right */
+  #nav_button_parent {
+    display: flex;
+    padding-left: 0;
+  }
+
+  /* Hide menu links by default */
+  #navigation_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 1rem 0;
+  }
+
+  #navigation_list ul {
+    flex-direction: column;
+    padding-left: 1.2rem;
+    gap: 1rem;
+  }
+
+  /* Toggle menu only */
+  #nav_toggle:checked ~ #navigation_list {
+    display: block;
+  }
+  /*fixing the layout*/
+  section,
+  header,
+  footer,
+  nav,
+  .testimonials,
+  .activities,
+  .about_school {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Fix large desktop paddings */
+  #nav_button_parent {
+    padding-left: 0;
+  }
+
+  /* Allow flex items to wrap */
+  .b_list,
+  #first_child,
+  #nav_bar {
+    flex-wrap: wrap;
+  }
+
+ 
+
+}
+
