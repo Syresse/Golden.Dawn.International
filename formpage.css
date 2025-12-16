@@ -32,61 +32,98 @@ a{
 /*
  *working on the navigation bar of the school website homepage
 */
-#navigation{
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.logo-main {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b3c73;
+  letter-spacing: 2px;
+}
+
+.logo-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a227;
+  margin-top: 2px;
+}
+
+#navigation {
   z-index: 10;
   position: sticky;
-  background-color: whitesmoke ;
+  background-color: whitesmoke;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.041);
 }
-#nav_bar{
+
+#nav_bar {
   min-height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  margin: auto;
+  width: 97%;
+  
 }
+
 #navigation_list {
-   flex: 0.5 1 26rem;
-  ul{
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-  }
-  a{
-    text-decoration: none;
-  }
- 
+  flex: 0.5 1 15rem;
+  padding-left: 3rem;
+  
 }
-#menu_button{
-  color:#F6C343;
-  font-size: 30px;
+#navigation_list ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#navigation_list a {
+  text-decoration: none;
 }
 .active{
   border-bottom: #003366 2px solid;
     
 }
-#nav_button{
+#nav_toggle {
+  display: none ;
+}
+
+#menu_button {
+  display: none;
+  cursor: pointer;
+}
+
+#menu_button {
+  color: #F6C343;
+  font-size: 30px;
+}
+
+#nav_button {
   border-radius: 20px;
-  background-color:#F6C343;
+  background-color: #F6C343;
   border: none;
-  padding: 0.8rem 3rem;
+  padding: 0.5rem 3rem;
   color: white;
 }
-#nav_button_parent{
-  padding-left: 15rem;
+
+
+#nav_button_parent {
+  
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  flex: 0.5 1 26rem;
-  a{
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-  }
+  
+  flex: 0.2 1 5px;
+}
+#nav_button_parent a {
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
 }
 /*designing the landing site of my school registration form*/
 #form_parent{
@@ -94,10 +131,10 @@ a{
     background-image: url(fp_image/originalformbackground.jpg);
     min-height: 100vh;
     background-size: cover;
-    background-position: center;
-
-
-        
+    background-position: center;  
+}
+.logo{
+  align-self: center;
 }
 #form_child{
     padding: 3rem 0rem;
@@ -180,6 +217,20 @@ button {
 .agree-box a:hover {
   text-decoration: underline;
 }
+.form-group select {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-group select:focus {
+  border-color: #003366;
+}
+
 /*
  *working on the footer section of the website
  *the copyright section 
@@ -199,6 +250,9 @@ button {
 #footer{
     background-color:  #ECF0F1;
     
+}
+.logo{
+  font-size: 10px;
 }
 #first_child{
     display: flex;
@@ -259,7 +313,14 @@ button {
       font-size: 14px;
     }
 }
+/* Desktop behavior */
+.nav-logo {
+  display: flex;
+}
 
+.landing-logo {
+  display: none;
+}
 /*adding a media query to our website*/
 @media (max-width:768px) {
      #nav_button_parent{
@@ -282,20 +343,21 @@ button {
     
 }
 @media (max-width:600px) {
- #nav_toggle {
+  .logo_text {
+    font-size: 1.2rem;
+  }
+  #nav_toggle {
     position: absolute;
     opacity: 0;
     pointer-events: none;
   }
   #nav_bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8rem;
+    
   }
-
+  
   #menu_button {
-    display: block;
+    display: inline;
     font-size: 30px;
     cursor: pointer;
   }
@@ -325,7 +387,78 @@ button {
 
   /* Toggle menu only */
   #nav_toggle:checked ~ #navigation_list {
-    display: block;
+    display:inline;
+  }
+  
+   /*fixing the layout*/
+  section,
+  header,
+  footer,
+  nav,
+  .testimonials,
+  .activities,
+  .about_school {
+    width: 100%;
+    
+  }
+
+  /* Fix large desktop paddings */
+  #nav_button_parent {
+    padding-left: 0;
+  }
+
+  /* Allow flex items to wrap */
+  
+  #first_child{
+    flex-wrap: wrap;
+  }
+  
+  #landing_site_parent{
+    width: 100%;
+    margin: auto;
+  }
+  #first_cards{
+    flex-wrap: wrap;
+  }
+  #landing_site{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #landing_page_image {
+    height: 40vh;          
+    width: 100%;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  #landing_page_image img {
+    width: 120%;
+    object-fit: cover;      
+  }
+  
+  #landing_site,
+  #landing_page_image,
+  #landing_page_message,
+  #landing_page_message p,
+  #landing_message_buttons {
+    padding: 0.5rem 0.5rem !important;
+  }
+  .about_school{
+    padding: 1rem 0.5rem;
+  }
+  #first_child{
+    gap: 2rem;
+    
+  }
+  .f_list3 a{
+    text-decoration: none;
+  }
+  #nav_bar {
+    gap: 1rem; /* optional */
+  }
+
+  #nav_button_parent {
+    gap: 0.5rem;
   }
   /* ===== FOOTER ===== */
   #footer_child {
@@ -341,27 +474,45 @@ button {
   #b_list{
     gap: 0 !important;
   }
-  #b_list a{
-    text-decoration: none;
-  }
   .f_list2,
   .f_list3 {
     padding: 0;
   }
   /* remove unwanted spacing in footer lists */
-.b_list {
-  gap: 0;
-  justify-content: flex-start;
-}
+  .b_list {
+    gap: 4rem;
+    justify-content: flex-start;
+  }
 
-.b_list ul {
-  margin: 0;
-  padding: 0;
-}
+  .b_list ul {
+    margin: 0;
+    padding: 0;
+  }
 
-/* remove leftover desktop padding */
-.f_list2,
-.f_list3 {
-  padding: 0;
+  /* remove leftover desktop padding */
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+   /* REMOVE logo from navbar */
+  #nav_bar .nav-logo {
+    display: none !important;
+  }
+
+  /* SHOW logo in landing section */
+  .landing-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    padding-top: 2rem;
+  }
 }
+@media (max-width: 1024px) {
+  .f_list5 {
+    display: flex;
+    justify-content: space-between; 
+    gap: 1rem;                     
+            
+  }
 }

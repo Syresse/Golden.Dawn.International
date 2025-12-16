@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap');
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.logo-main {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b3c73;
+  letter-spacing: 2px;
+}
+
+.logo-sub {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a227;
+  margin-top: 2px;
+}
+
+/* =========================
+   NAVIGATION BAR (DESKTOP)
+========================= */
+#navigation {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: whitesmoke;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#nav_bar {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+/* Navigation links */
+#navigation_list ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation_list a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: 500;
+}
+
+.active {
+  border-bottom: 2px solid #003366;
+}
+
+/* CTA buttons */
+#nav_button_parent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#nav_button {
+  background: #F6C343;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+#nav_button1 {
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: #003366;
+}
+
+/* Menu toggle */
+#nav_toggle {
+  display: none;
+}
+
+#menu_button {
+  display: none;
+  font-size: 30px;
+  color: #F6C343;
+  cursor: pointer;
+}
+
+/* =========================
+   DEPARTMENTS SECTION
+========================= */
+.departments {
+  padding: 1.5rem 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.dept-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #003366;
+}
+
+.dept-subtitle {
+  color: #555;
+  max-width: 600px;
+  margin: 0.5rem auto 3rem;
+}
+
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.dept-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.dept-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.dept-info {
+  padding: 1.2rem;
+}
+
+.dept-info h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.dept-info p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Hover animation */
+.dept-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* DETAILS */
+.dept-details {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.dept-detail {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.dept-detail h2 {
+  color: #003366;
+}
+
+.dept-detail ul {
+  padding-left: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* GALLERY */
+.gallery-grid {
+    width: 88%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* CTA */
+.dept-cta {
+    width: 90%;
+    margin: auto;
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 16px;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #F6C343;
+  color: #003366;
+  padding: 0.7rem 2.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*
+ *working on the footer section of the website
+ *the copyright section 
+*/
+#footer_child {
+  min-height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  width: 88%;
+  margin: auto;
+  flex-direction: column;
+}
+#footer_child li {
+  list-style: none;
+}
+
+#footer {
+  background-color: #ECF0F1;
+}
+.logo p{
+  font-size: 10px;
+}
+#first_child {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 3rem 0rem;
+}
+
+.b_list {
+  display: flex;
+  flex: 1 1 26rem;
+  justify-content: space-between;
+}
+
+.f_list1 {
+  flex: 4 1 26rem;
+}
+
+.f_list2 {
+  padding-left: 8rem;
+}
+
+.f_list3 {
+  padding-right: 2rem;
+}
+
+.b_list ul {
+  line-height: 22px;
+}
+
+.second_child {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0rem;
+}
+
+.f_list4 {
+  flex: 3 1 26rem;
+}
+.f_list4 button {
+  padding: 0.3rem 1rem;
+  font-size: 12px;
+  background-color: #F6C343;
+  color: #ECF0F1;
+  border: none;
+  border-radius: 8px;
+}
+
+.f_list5 {
+  flex: 1 1 26rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.f_list5 span {
+  color: #F6C343;
+  font-size: 16px;
+  font-style: bold;
+}
+.f_list5 a {
+  font-size: 14px;
+}
+/* Desktop behavior */
+.nav-logo {
+  display: flex;
+}
+
+.landing-logo {
+  display: none;
+}
+
+/* Desktop behavior */
+.nav-logo {
+  display: flex;
+}
+
+.landing-logo {
+  display: none;
+}
+/* Desktop behavior */
+.nav-logo {
+  display: flex;
+}
+
+.landing-logo {
+  display: none;
+}
+/* 
+   MOBILE NAVIGATION
+ */
+@media (max-width: 600px) {
+
+  #nav_bar {
+    position: relative;
+  }
+
+  /* Show menu icon */
+  #menu_button {
+    display: inline-flex;
+    order: 1;
+  }
+
+  /* Center logo */
+  .logo {
+    order: 2;
+  }
+
+  /* Hide CTA */
+  #nav_button_parent {
+    display: none;
+  }
+
+  /* Hide nav links */
+  #navigation_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 1rem 0;
+    z-index: 11;
+  }
+
+  #navigation_list ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1.2rem;
+  }
+
+  /* Toggle menu */
+  #nav_toggle:checked ~ #navigation_list {
+    display: block;
+  }
+   .dept-detail {
+    padding: 1.5rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    padding: 0.8rem;
+  }
+  /* Department tweaks */
+  .dept-title {
+    font-size: 1.8rem;
+  }
+
+  .dept-card img {
+    height: 150px;
+  }
+   #first_child{
+    gap: 2rem;
+    
+  }
+  .f_list3 a{
+    text-decoration: none;
+  }
+  #nav_bar {
+    gap: 1rem; /* optional */
+  }
+
+  #nav_button_parent {
+    gap: 0.5rem;
+  }
+  .activity-info{
+    padding: 1rem;
+
+  }
+  /* ===== FOOTER ===== */
+  #footer_child {
+    width: 100%;
+    padding-left: 0.8rem;
+  }
+
+  #first_child,
+  .second_child{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  #b_list{
+    gap: 0 !important;
+  }
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+  /* remove unwanted spacing in footer lists */
+  .b_list {
+    gap: 4rem;
+    justify-content: flex-start;
+  }
+
+  .b_list ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* remove leftover desktop padding */
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+  /* REMOVE logo from navbar */
+  #nav_bar .nav-logo {
+    display: none !important;
+  }
+
+  /* SHOW logo in landing section */
+  .landing-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    padding-top: 2rem;
+  }
+    .gallery-grid img {
+    height: 180px;
+  }
+
+}

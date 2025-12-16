@@ -33,69 +33,111 @@ a{
 /*
  *working on the navigation bar of the school website homepage
 */
-#navigation{
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.logo-main {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b3c73;
+  letter-spacing: 2px;
+}
+
+.logo-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a227;
+  margin-top: 2px;
+}
+
+#navigation {
+  min-height: 8vh;
   z-index: 10;
   position: sticky;
-  background-color: whitesmoke ;
+  background-color: whitesmoke;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.041);
+  align-self: center;
 }
+
 #nav_bar {
-  display: flex;
-  align-items: center;
   width: 88%;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 3rem;
+}
+
+#navigation_list {
+  padding-left: 4rem;
+}
+#navigation_list ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+}
+#navigation_list a {
+  text-decoration: none;
 }
 .active{
   border-bottom: #003366 2px solid;
     
 }
-#navigation_list ul {
-  display: flex;
-  gap: 15rem;
-  list-style: none;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
+#nav_toggle {
+  display: none ;
 }
 
-#navigation_list a {
-  text-decoration: none;
-}
-#nav_toggle{
-  display: none;
-}
 #menu_button {
   display: none;
   cursor: pointer;
 }
-#nav_button{
-  border-radius: 20px;
-  background-color:#F6C343;
-  border: none;
-  padding: 0.8rem 3rem;
-  color: white;
-}
-#nav_button_parent {
-  display: flex;
-  gap: 1rem;
-  margin-left: auto; /* KEY LINE */
-  padding-left: 2rem;
-}
-#nav_button_parent a{
-  text-decoration: none;
-  align-self: center;
-}
-#navigation {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  
-}
 
 #menu_button {
-  position: relative;
-  z-index: 10000;
+  color: #F6C343;
+  font-size: 30px;
 }
+
+#nav_button {
+  border-radius: 20px;
+  background-color: #F6C343;
+  border: none;
+  padding: 0.5rem 3rem;
+  color: white;
+}
+
+#nav_button1{
+  padding: 0rem 1.5rem;
+}
+#nav_button_parent {
+  
+   margin-left: auto;     
+  display: flex;         
+  align-items: center;
+  gap: 0;                
+  padding: 0 2rem;
+  flex: none;        
+}
+#nav_button_parent a,
+#nav_button_parent button {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;  
+}
+#nav_button_parent a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
 /* HEADER SECTION */
 .services_header {
     text-align: center;
@@ -149,8 +191,16 @@ a{
     background: #003366;
     color: white;
     margin-top: 30px;
+    
 }
-
+.logo{
+  align-self: center;
+  
+}
+.apply{
+  padding: 1rem 3rem;
+ 
+}
 .cta h2 {
     margin-bottom: 20px;
 }
@@ -187,6 +237,9 @@ a{
 #footer{
     background-color:  #ECF0F1;
     
+}
+.logo{
+  font-size: 8px !important;
 }
 #first_child{
     display: flex;
@@ -254,7 +307,14 @@ a{
       font-size: 14px;
     }
 }
+/* Desktop behavior */
+.nav-logo {
+  display: flex;
+}
 
+.landing-logo {
+  display: none;
+}
 /*adding a media query to our website*/
 @media (max-width:768px) {
     #nav_button_parent{
@@ -272,107 +332,176 @@ a{
     }
 }
 @media (max-width:600px) {
-/* ===== NAVBAR ===== */
-#nav_bar {
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-/* hide checkbox visually BUT keep it clickable */
-#nav_toggle {
-  position: absolute;
-  opacity: 0;
-  z-index: 1001;       /* above menu */
-  pointer-events: auto; /* 🔥 FIX: MUST be clickable */
-}
-
-/* show hamburger */
-#menu_button {
-  display: block;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 1002; /* above everything */
-}
-
-/* keep buttons on the right */
-#nav_button_parent {
-  padding-left: 0;
-  gap: 0.5rem;
-  display: flex;
-}
-
-#nav_button_parent a {
-  text-decoration: none;
-  align-self: center;
-}
-
-/* hide menu by default */
-#navigation_list {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: whitesmoke;
-  padding: 1rem 0;
-  flex: none; /* IMPORTANT */
-  z-index: 999;
-}
-
-#navigation_list ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-left: 1.5rem;
-}
-
-/* ✅ TOGGLE MENU (THIS NOW WORKS) */
-#nav_toggle:checked ~ #navigation_list {
-  display: block;
-}
-
-/* ===== SERVICES PAGE ===== */
-.services_header {
-  padding: 40px 1rem;
-}
-
-.services_header h1 {
-  font-size: 28px;
-}
-
-.services_container {
-  padding: 1.5rem 1rem;
-  gap: 16px;
-}
-
-.service_card {
-  padding: 20px;
-}
-
-/* ===== CTA ===== */
-.cta {
-  padding: 40px 1rem;
-}
-
-/* ===== FOOTER ===== */
-#footer_child {
-  width: 100%;
-  padding-left: 0.8rem;
-}
-
-#first_child,
-.second_child,
-.b_list {
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.f_list2,
-.f_list3 {
-  padding: 0;
-}
-
+   .logo_text {
+    font-size: 1.2rem;
+  }
+  #nav_toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #nav_bar {
+    display: flex;
+    
+  }
   
+  #menu_button {
+    display: inline;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Keep CTA on the right */
+  #nav_button_parent {
+    display: flex;
+    padding-left: 0;
+  }
+
+  /* Hide menu links by default */
+  #navigation_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 1rem 0;
+  }
+
+  #navigation_list ul {
+    flex-direction: column;
+    padding-left: 1.2rem;
+    gap: 1rem;
+  }
+
+  /* Toggle menu only */
+  #nav_toggle:checked ~ #navigation_list {
+    display:inline;
+  }
+  
+   /*fixing the layout*/
+  section,
+  header,
+  footer,
+  nav,
+  .testimonials,
+  .activities,
+  .about_school {
+    width: 100%;
+    
+  }
+
+  /* Fix large desktop paddings */
+  #nav_button_parent {
+    padding-left: 0;
+  }
+
+  /* Allow flex items to wrap */
+  
+  #first_child{
+    flex-wrap: wrap;
+  }
+  
+  #landing_site_parent{
+    width: 100%;
+    margin: auto;
+  }
+  #first_cards{
+    flex-wrap: wrap;
+  }
+  #landing_site{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #landing_page_image {
+    height: 40vh;          
+    width: 100%;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  #landing_page_image img {
+    width: 120%;
+    object-fit: cover;      
+  }
+  
+  #landing_site,
+  #landing_page_image,
+  #landing_page_message,
+  #landing_page_message p,
+  #landing_message_buttons {
+    padding: 0.5rem 0.5rem !important;
+  }
+  .about_school{
+    padding: 1rem 0.5rem;
+  }
+  #first_child{
+    gap: 2rem;
+    
+  }
+  .f_list3 a{
+    text-decoration: none;
+  }
+  #nav_bar {
+    gap: 1rem; /* optional */
+  }
+
+  #nav_button_parent {
+    gap: 0.5rem;
+  }
+   #footer_child {
+    width: 100%;
+    padding-left: 0.8rem;
+  }
+
+  #first_child,
+  .second_child{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  #b_list{
+    gap: 0 !important;
+  }
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+  /* remove unwanted spacing in footer lists */
+  .b_list {
+    gap: 4rem;
+    justify-content: flex-start;
+  }
+
+  .b_list ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* remove leftover desktop padding */
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+   /* REMOVE logo from navbar */
+  #nav_bar .nav-logo {
+    display: none !important;
+  }
+
+  /* SHOW logo in landing section */
+  .landing-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    padding-top: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .f_list5 {
+    display: flex;
+    justify-content: space-between; 
+    gap: 1rem;                     
+            
+  }
+ 
 }

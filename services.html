@@ -9,30 +9,43 @@
 </head>
 <body>
     <!--creating the navigation bar of my school weebsite-->
-    <header id="navigation">
+       <header id="navigation">
         <nav id="nav_bar">
-            <!-- Toggle checkbox -->
+             <!-- Toggle checkbox -->
             <input type="checkbox" id="nav_toggle">
 
             <!-- Hamburger icon -->
             <label for="nav_toggle" id="menu_button">
             ☰
             </label>
+            <div class="logo">
+                <a href="index.html" class="logo nav-logo">
+                    <span class="logo-main">GOLDEN DAWN</span>
+                    <span class="logo-sub">International</span>
+                </a>
+            </div>
+
             <div id="navigation_list">
                 <ul>
-                    <li ><a href="index.html">Home</a></li>
+                    <li class="active" ><a href="index.html">Home</a></li>
                     <li><a href="courses.html">Courses</a></li>
-                    <li class="active"><a href="services.html">Services</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="departments.html">Departments</a></li>
                 
                 </ul>
             </div>    
             <div id="nav_button_parent">
-                <a href="sign-up.html">Sign up</a>
+                <a href="sign-up.html" id="nav_button1">Sign up</a>
                 <i class="fa-solid fa-user"></i>
                 <a href="log_in_form.html" id="nav_button">Log in</a>
             </div>
         </nav>
     </header>
+    <!--landing site-->
+    <div class="logo landing-logo">
+        <span class="logo-main">GOLDEN DAWN</span>
+        <span class="logo-sub">International</span>
+    </div>
     <header class="services_header">
         <h1>Our School Services</h1>
         <p>Providing comprehensive academic, administrative, and student services.</p>
@@ -65,8 +78,14 @@
 
     <!-- CTA SECTION -->
     <section class="cta">
-        <h2>Ready To Join Our School?</h2>
-        <a href="formpage.html" class="cta_btn">Apply Now</a>
+        <div class="logo">
+            <span class="logo-main">Golden Dawn</span>
+            <span class="logo-sub">International</span>
+        </div>
+        <div class="apply">
+            <h2>Ready To Join Our School?</h2>
+            <a href="formpage.html" class="cta_btn">Apply Now</a>
+        </div>
     </section>
 
     <!--creating the footer section of the website-->
@@ -74,8 +93,11 @@
         <div id="footer_child">
             <div id="first_child">
                 <div class="f_list1">
-                    <h3>Golden Dawn International</h3>
-                    <p>Excellence,our hallmark</p>
+                    <div class="logo">
+                        <span class="logo-main">Golden Dawn</span>
+                        <span class="logo-sub">International</span>
+                        <p>Excellence our hallmark</p>
+                    </div>
                 </div>
                 <div class="b_list">
                     <ul class="f_list2 ">

@@ -110,6 +110,159 @@ body {
 @media (max-width: 600px) {
 
  
+.logo_text {
+    font-size: 1.2rem;
+  }
+  #nav_toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #nav_bar {
+    display: flex;
+    
+  }
+  
+  #menu_button {
+    display: inline;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Keep CTA on the right */
+  #nav_button_parent {
+    display: flex;
+    padding-left: 0;
+  }
+
+  /* Hide menu links by default */
+  #navigation_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 1rem 0;
+  }
+
+  #navigation_list ul {
+    flex-direction: column;
+    padding-left: 1.2rem;
+    gap: 1rem;
+  }
+
+  /* Toggle menu only */
+  #nav_toggle:checked ~ #navigation_list {
+    display:inline;
+  }
+  
+   /*fixing the layout*/
+  section,
+  header,
+  footer,
+  nav,
+  .testimonials,
+  .activities,
+  .about_school {
+    width: 100%;
+    
+  }
+
+  /* Fix large desktop paddings */
+  #nav_button_parent {
+    padding-left: 0;
+  }
+
+  /* Allow flex items to wrap */
+  
+  #first_child{
+    flex-wrap: wrap;
+  }
+  
+  #landing_site_parent{
+    width: 100%;
+    margin: auto;
+  }
+  #first_cards{
+    flex-wrap: wrap;
+  }
+  #landing_site{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #landing_page_image {
+    height: 40vh;          
+    width: 100%;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  #landing_page_image img {
+    width: 120%;
+    object-fit: cover;      
+  }
+  
+  #landing_site,
+  #landing_page_image,
+  #landing_page_message,
+  #landing_page_message p,
+  #landing_message_buttons {
+    padding: 0.5rem 0.5rem !important;
+  }
+  .about_school{
+    padding: 1rem 0.5rem;
+  }
+  #first_child{
+    gap: 2rem;
+    
+  }
+  .f_list3 a{
+    text-decoration: none;
+  }
+  #nav_bar {
+    gap: 1rem; /* optional */
+  }
+
+  #nav_button_parent {
+    gap: 0.5rem;
+  }
+  /* ===== FOOTER ===== */
+  #footer_child {
+    width: 100%;
+    padding-left: 0.8rem;
+  }
+
+  #first_child,
+  .second_child{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  #b_list{
+    gap: 0 !important;
+  }
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+  /* remove unwanted spacing in footer lists */
+  .b_list {
+    gap: 4rem;
+    justify-content: flex-start;
+  }
+
+  .b_list ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* remove leftover desktop padding */
+  .f_list2,
+  .f_list3 {
+    padding: 0;
+  }
+
+
 
   /* ===== SERVICES PAGE ===== */
   .services_header {

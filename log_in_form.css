@@ -35,62 +35,100 @@ a{
 /*
  *working on the navigation bar of the school website homepage
 */
-#navigation{
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.logo-main {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b3c73;
+  letter-spacing: 2px;
+}
+
+.logo-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a227;
+  margin-top: 2px;
+}
+
+#navigation {
   z-index: 10;
   position: sticky;
-  background-color: whitesmoke ;
+  background-color: whitesmoke;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.041);
 }
-#nav_bar{
+
+#nav_bar {
   min-height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  margin: auto;
+  width: 97%;
+  
 }
+
 #navigation_list {
-   flex: 0.5 1 26rem;
-  ul{
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-  }
-  a{
-    text-decoration: none;
-  }
- 
+  flex: 0.5 1 15rem;
+  padding-left: 3rem;
+  
 }
-#nav_toggle{
-  display: none;
+#navigation_list ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+#navigation_list a {
+  text-decoration: none;
+}
+.active{
+  border-bottom: #003366 2px solid;
+    
+}
+#nav_toggle {
+  display: none ;
+}
+
 #menu_button {
   display: none;
   cursor: pointer;
 }
 
-#nav_button{
+#menu_button {
+  color: #F6C343;
+  font-size: 30px;
+}
+
+#nav_button {
   border-radius: 20px;
-  background-color:#F6C343;
+  background-color: #F6C343;
   border: none;
-  padding: 0.8rem 3rem;
+  padding: 0.5rem 3rem;
   color: white;
 }
-#nav_button_parent{
-  padding-left: 15rem;
+
+
+#nav_button_parent {
+  
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  flex: 0.5 1 26rem;
-  a{
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-  }
+  
+  flex: 0.2 1 5px;
 }
+#nav_button_parent a {
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+}
+
 /* General Page Setup */
 #log-in_parent {
     margin: 0;
@@ -207,6 +245,14 @@ a{
 .signup_text a:hover {
     text-decoration: underline;
 }
+/* Desktop behavior */
+.nav-logo {
+  display: flex;
+}
+
+.landing-logo {
+  display: none;
+}
 /*working on mobile responsiveness*/
 @media (max-width:768px) {
     #nav_button_parent{
@@ -225,20 +271,21 @@ a{
   
 }
 @media (max-width:600px) {
-   #nav_toggle {
+  .logo_text {
+    font-size: 1.2rem;
+  }
+  #nav_toggle {
     position: absolute;
     opacity: 0;
     pointer-events: none;
   }
   #nav_bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8rem;
+    
   }
-
+  
   #menu_button {
-    display: block;
+    display: inline;
     font-size: 30px;
     cursor: pointer;
   }
@@ -268,9 +315,10 @@ a{
 
   /* Toggle menu only */
   #nav_toggle:checked ~ #navigation_list {
-    display: block;
+    display:inline;
   }
-  /*fixing the layout*/
+  
+   /*fixing the layout*/
   section,
   header,
   footer,
@@ -279,19 +327,32 @@ a{
   .activities,
   .about_school {
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    
   }
 
   /* Fix large desktop paddings */
   #nav_button_parent {
     padding-left: 0;
-    gap: 0.2rem;
   }
 
   /* Allow flex items to wrap */
   
- 
+  #first_child{
+    flex-wrap: wrap;
+  }
 
+  #nav_bar {
+    gap: 1rem; /* optional */
+  }
+
+  #nav_button_parent {
+    gap: 0.5rem;
+  }
+   /* REMOVE logo from navbar */
+  #nav_bar .nav-logo {
+    display: none !important;
+  }
+
+ 
 }
 
