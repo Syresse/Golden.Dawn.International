@@ -336,28 +336,67 @@ a{
     font-size: 1.2rem;
   }
   #nav_toggle {
-    position: absolute;
+    
     opacity: 0;
     pointer-events: none;
   }
-  #nav_bar {
-    display: flex;
-    
-  }
-  
-  #menu_button {
-    display: inline;
-    font-size: 30px;
-    cursor: pointer;
+ /* ===============================
+   MOBILE NAVBAR — CLEAN & STABLE
+================================ */
+
+
+  /* REMOVE DANGEROUS OVERFLOW */
+  * {
+    overflow-x: visible;
   }
 
-  /* Keep CTA on the right */
+  /* NAV CONTAINER */
+  #nav_bar {
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    position: relative;
+  }
+
+  /* HAMBURGER — LEFT, ALIGNED WITH PAGE */
+  #menu_button {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    color: #F6C343;
+  }
+
+  /* HIDE LOGO IN NAV */
+  .nav-logo {
+    display: none !important;
+  }
+
+  /* CTA BUTTONS — RIGHT, HORIZONTAL */
   #nav_button_parent {
     display: flex;
-    padding-left: 0;
+    align-items: center;
+    gap: 0.6rem;
   }
 
-  /* Hide menu links by default */
+  #nav_button_parent a {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  #nav_button {
+    padding: 0.4rem 1.2rem;
+    border-radius: 16px;
+  }
+
+  #nav_button1 {
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* DROPDOWN MENU */
   #navigation_list {
     display: none;
     position: absolute;
@@ -366,17 +405,28 @@ a{
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    z-index: 50;
   }
 
   #navigation_list ul {
+    display: flex;
     flex-direction: column;
-    padding-left: 1.2rem;
     gap: 1rem;
+    padding-left: 1.5rem;
   }
 
-  /* Toggle menu only */
+  /* TOGGLE MENU */
   #nav_toggle:checked ~ #navigation_list {
-    display:inline;
+    display: block;
+  }
+
+  /* LANDING LOGO — MOBILE ONLY */
+  .landing-logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.5rem;
   }
   
    /*fixing the layout*/
