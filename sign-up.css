@@ -263,6 +263,8 @@ a{
   }
   #nav_bar {
     display: flex;
+    width: 88%;
+    margin: auto;
     
   }
   
@@ -294,7 +296,7 @@ a{
     padding-left: 1.2rem;
     gap: 1rem;
   }
-
+  
   /* Toggle menu only */
   #nav_toggle:checked ~ #navigation_list {
     display:inline;
@@ -334,6 +336,35 @@ a{
   #nav_bar .nav-logo {
     display: none !important;
   }
+    /* =========================
+     AUTH PAGES NAV FIX
+     (HORIZONTAL BUTTONS)
+  ========================= */
 
+  .auth-page #nav_bar {
+    align-items: center;
+  }
+
+  .auth-page #nav_button_parent {
+    display: flex;
+    flex-direction: row;      /* KEEP HORIZONTAL */
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .auth-page #nav_button_parent a {
+    font-size: 0.78rem;
+    padding: 0.35rem 1rem;
+    white-space: nowrap;      /* STOP WRAPPING */
+  }
+
+  .auth-page #nav_button {
+    padding: 0.35rem 1.4rem;
+  }
+
+  .auth-page #nav_button_parent i {
+    font-size: 0.8rem;
+  }
  
 }

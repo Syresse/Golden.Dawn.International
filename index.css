@@ -219,6 +219,7 @@ h3 span {
   border: none;
   padding: 0.6rem 3rem;
   color: white;
+  font-weight: 700;
 }
 
 #lmb_2 {
@@ -424,6 +425,7 @@ h4 {
   text-align: center;
   width: 88%;
   margin: auto;
+  padding-top: 3rem;
 }
 .activity-info{
   padding: 1rem;
@@ -437,10 +439,12 @@ h4 {
   font-size: 14px;
 }
 
-.activities_itle {
+.activities_title {
   font-size: 36px;
   color: #F6C343;
   padding-bottom: 10px;
+  padding-top: 3rem;
+
 }
 
 .activities_subtitle {
@@ -647,6 +651,7 @@ h4 {
   /*moving on to the about school part*/
   .about_school {
     min-height: 42vh;
+    
   }
   .about_content {
     flex: 1;
@@ -657,6 +662,7 @@ h4 {
     font-size: 32px;
     padding-bottom: 0rem;
     font-weight: 600;
+   
   }
   .about_content p {
     padding-bottom: 15px;
@@ -813,6 +819,9 @@ h4 {
     padding: 1rem;
 
   }
+  .testimonials{
+    padding: 0.5rem;
+  }
   /* ===== FOOTER ===== */
   #footer_child {
     width: 100%;
@@ -851,7 +860,16 @@ h4 {
   #nav_bar .nav-logo {
     display: none !important;
   }
-
+  .about_content h2{
+    padding-top: 3rem;
+    text-align: center;
+  }
+  .about_content p{
+    text-align: center;
+  }
+  .testimonials h2{
+    padding-top: 2rem;
+  }
   /* SHOW logo in landing section */
   .landing-logo {
     display: flex;

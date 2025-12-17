@@ -8,7 +8,9 @@ body {
   font-family: 'Inter', sans-serif;
   background: #f9fafb;
 }
-
+a{
+    color: black;
+}
 /* =========================
    LOGO
 ========================= */
@@ -188,6 +190,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+  width: 90%;
+  margin: auto;
 }
 
 .dept-detail {
@@ -323,6 +327,7 @@ body {
   flex: 1 1 26rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 12px;
 }
 .f_list5 span {
@@ -363,27 +368,56 @@ body {
  */
 @media (max-width: 600px) {
 
+  /* =========================
+     NAV BAR BASE
+  ========================= */
+   /* NAV BAR LAYOUT */
   #nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
+    gap: 0;
   }
 
-  /* Show menu icon */
+  /* MENU BUTTON — ALWAYS LEFT */
   #menu_button {
     display: inline-flex;
+    font-size: 30px;
+    cursor: pointer;
     order: 1;
   }
 
-  /* Center logo */
-  .logo {
+  /* HIDE LOGO FROM NAV BAR */
+  #nav_bar .logo,
+  #nav_bar .nav-logo {
+    display: none !important;
+  }
+
+  /* CTA BUTTONS — RIGHT */
+  #nav_button_parent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     order: 2;
   }
 
-  /* Hide CTA */
-  #nav_button_parent {
-    display: none;
+  /* FIX CTA TEXT STACKING */
+  #nav_button_parent a {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    text-decoration: none;
   }
 
-  /* Hide nav links */
+  #nav_button {
+    padding: 0.4rem 1.4rem;
+  }
+
+  #nav_button1 {
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* HIDE NAV LINKS BY DEFAULT */
   #navigation_list {
     display: none;
     position: absolute;
@@ -392,54 +426,51 @@ body {
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0;
-    z-index: 11;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    z-index: 20;
   }
 
   #navigation_list ul {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
     padding-left: 1.2rem;
+    margin: 0;
   }
 
-  /* Toggle menu */
+  /* TOGGLE MENU */
   #nav_toggle:checked ~ #navigation_list {
     display: block;
   }
-   .dept-detail {
-    padding: 1.5rem;
+
+  /* LANDING LOGO — SHOW ONLY ON MOBILE */
+  .landing-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    text-align: center;
   }
 
-  .cta-btn {
-    width: 100%;
-    padding: 0.8rem;
-  }
-  /* Department tweaks */
+
+  /* =========================
+     GENERAL MOBILE FIXES
+  ========================= */
   .dept-title {
     font-size: 1.8rem;
   }
 
-  .dept-card img {
-    height: 150px;
+  .dept-card img,
+  .gallery-grid img {
+    height: 180px;
   }
-   #first_child{
-    gap: 2rem;
+
+  .cta-btn {
+    width: 92%;
+    padding: 0rem 0rem;
     
   }
-  .f_list3 a{
-    text-decoration: none;
-  }
-  #nav_bar {
-    gap: 1rem; /* optional */
-  }
-
-  #nav_button_parent {
-    gap: 0.5rem;
-  }
-  .activity-info{
-    padding: 1rem;
-
-  }
-  /* ===== FOOTER ===== */
+   /* ===== FOOTER ===== */
   #footer_child {
     width: 100%;
     padding-left: 0.8rem;
@@ -473,21 +504,6 @@ body {
   .f_list3 {
     padding: 0;
   }
-  /* REMOVE logo from navbar */
-  #nav_bar .nav-logo {
-    display: none !important;
-  }
-
-  /* SHOW logo in landing section */
-  .landing-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-    padding-top: 2rem;
-  }
-    .gallery-grid img {
-    height: 180px;
-  }
-
+  
 }
+
