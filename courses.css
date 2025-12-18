@@ -313,22 +313,72 @@ background: #F6C343;
   display: none;
 }
 /*adding a media query to our website*/
-@media (max-width=768px) {
-    #nav_button_parent{
-      gap: 2px;
-      a{
-        padding: 0rem 0rem;
-      }
-    }
-    #nav_button_parent a#nav_button {
-      padding: 0.3rem 0.5rem;
-    }
-    #nav_button{
-      border-radius: 12px;
-    }
-   
+/* ================================
+   TABLET FIX — 768px to 820px
+   Services Navbar Only
+================================ */
+@media (max-width: 820px) and (min-width: 601px) {
+
+  /* Nav container */
+  #nav_bar {
+    justify-content: space-between; /* ← KEY FIX */
+    gap: 1.2rem;
+  }
+
+  /* Logo stays normal size */
+  .nav-logo {
+    flex-shrink: 0;
+  }
+
+  /* Navigation links compress instead of overlap */
+  #navigation_list {
+    padding-left: 1.5rem;
+  }
+
+  #navigation_list ul {
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  #navigation_list a {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  /* CTA buttons MUST be allowed to shrink */
+  #nav_button_parent {
+    flex-shrink: 1;
+    gap: 0.4rem;
+    padding: 0;
+  }
+
+  #nav_button {
+    padding: 0.4rem 1.2rem; /* smaller but consistent */
+    font-size: 0.85rem;
+  }
+
+  #nav_button1 {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
 }
+
+
+
+
 @media (max-width:600px) {
+  /* Hide navbar logo */
+  .nav-logo {
+    display: none;
+  }
+
+  /* Show landing logo */
+  .landing-logo {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0 1rem;
+  }
+
   .logo_text {
     font-size: 1.2rem;
   }
@@ -393,58 +443,20 @@ background: #F6C343;
     padding-left: 0;
   }
 
-  /* Allow flex items to wrap */
   
-  #first_child{
-    flex-wrap: wrap;
-  }
-  
-  #landing_site_parent{
-    width: 100%;
-    margin: auto;
-  }
-  #first_cards{
-    flex-wrap: wrap;
-  }
-  #landing_site{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  #landing_page_image {
-    height: 40vh;          
-    width: 100%;
-    overflow: hidden;
-    padding: 0 !important;
-  }
-
-  #landing_page_image img {
-    width: 120%;
-    object-fit: cover;      
-  }
-  
-  #landing_site,
-  #landing_page_image,
-  #landing_page_message,
-  #landing_page_message p,
-  #landing_message_buttons {
-    padding: 0.5rem 0.5rem !important;
-  }
-  .about_school{
-    padding: 1rem 0.5rem;
-  }
-  #first_child{
-    gap: 2rem;
-    
-  }
-  .f_list3 a{
-    text-decoration: none;
-  }
   #nav_bar {
     gap: 1rem; /* optional */
   }
 
   #nav_button_parent {
     gap: 0.5rem;
+  }
+  .activity-info{
+    padding: 1rem;
+
+  }
+  .testimonials{
+    padding: 0.5rem;
   }
   /* ===== FOOTER ===== */
   #footer_child {
@@ -480,18 +492,27 @@ background: #F6C343;
   .f_list3 {
     padding: 0;
   }
-   /* REMOVE logo from navbar */
+  /* REMOVE logo from navbar */
   #nav_bar .nav-logo {
     display: none !important;
   }
-
+  .about_content h2{
+    padding-top: 3rem;
+    text-align: center;
+  }
+  .about_content p{
+    text-align: center;
+  }
+  .testimonials h2{
+    padding-top: 2rem;
+  }
   /* SHOW logo in landing section */
   .landing-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: x-large;
-    padding-top: 3rem;
+    padding-top: 2rem;
   }
 }
 @media (max-width: 1024px) {

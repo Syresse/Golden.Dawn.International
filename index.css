@@ -600,11 +600,15 @@ h4 {
 }
 
 /*adding a media query to our website*/
-@media (min-width:1200px) {
+@media (min-width:768px) {
   /*index*/
   /*working on the navigation bar*/
   .logo_text {
     font-size: 1.4rem;
+  }
+  #nav_bar{
+    width: 88%;
+    margin: auto;
   }
   #nav_button_parent {
     gap: 2px;
@@ -689,6 +693,45 @@ h4 {
     min-height: 79vh;
     padding-bottom: 0rem;
   }
+   .f_list5 {
+    display: flex;
+    justify-content: space-between; 
+    gap: 1rem;                     
+            
+  }
+  @media (max-width: 768px) {
+
+  /* Keep everything aligned */
+  #nav_bar {
+    width: 88%;
+    margin: auto;
+    align-items: center;
+  }
+
+  /* Logo stays visible */
+  .nav-logo {
+    display: flex;
+  }
+
+  /* Buttons stay inline */
+  #nav_button_parent {
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+
+  /* Reduce button padding slightly */
+  #nav_button,
+  #nav_button1 {
+    padding: 0.4rem 1rem;
+    font-size: 12px;
+  }
+
+  /* Menu spacing polish */
+  #navigation_list ul {
+    padding-left: 1.5rem;
+  }
+}
+
 }
 @media (max-width:600px) {
   /* Hide navbar logo */
@@ -889,37 +932,43 @@ h4 {
 }
 @media (max-width: 375px) {
 
-  #nav_bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 0.6rem 1rem;
-  }
-
-  #menu_button {
-    display: inline-flex;
-    position: absolute;
-    left: 1rem;
-    font-size: 28px;
-    cursor: pointer;
-  }
-
-  .nav-logo,
-  .logo_text {
-    font-size: 1.1rem;
-    text-align: center;
-    white-space: nowrap;
-    max-width: 70%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  #nav_button_parent {
+  .nav-logo {
     display: none;
   }
 
+  /* Show landing logo */
+  .landing-logo {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .logo_text {
+    font-size: 1.2rem;
+  }
+  #nav_toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #nav_bar {
+    display: flex;
+    
+  }
+  
+  #menu_button {
+    display: inline;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Keep CTA on the right */
+  #nav_button_parent {
+    display: flex;
+    padding-left: 0;
+  }
+
+  /* Hide menu links by default */
   #navigation_list {
     display: none;
     position: absolute;
@@ -928,22 +977,24 @@ h4 {
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    z-index: 11;
   }
 
   #navigation_list ul {
     flex-direction: column;
-    gap: 1rem;
     padding-left: 1.2rem;
+    gap: 1rem;
   }
 
+  /* Toggle menu only */
   #nav_toggle:checked ~ #navigation_list {
-    display: block;
+    display:inline;
   }
 }
 
 @media (max-width: 1024px) {
+  #nav_button_parent{
+    gap: 1rem;
+  }
   .f_list5 {
     display: flex;
     justify-content: space-between; 
@@ -951,7 +1002,76 @@ h4 {
             
   }
 }
+@media (max-width:850px) {
+   .logo_text {
+    font-size: 1.4rem;
+  }
+  #nav_bar{
+    width: 88%;
+    margin: auto;
+  }
+  #nav_button_parent {
+    gap: 2px;
+  }
+  .f_list5{
+    gap: 0.8rem;
+  }
+  #nav_button_parent a {
+    padding: 0rem 0rem;
+  }
+  #nav_button {
+    border-radius: 12px;
+  }
+  #nav_button_parent a#nav_button {
+    padding: 0.3rem 0.5rem;
+  }
+}
+@media (max-width: 820px) {
 
+  /* Keep nav width aligned with landing */
+  #nav_bar {
+    width: 88%;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  /* Hamburger visibility */
+  #menu_button {
+    display: inline-flex;
+    align-items: center;
+    font-size: 28px;
+  }
+
+  /* Keep buttons horizontal */
+  #nav_button_parent {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  /* Hide links initially */
+  #navigation_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+  }
+
+  #navigation_list ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  /* Toggle */
+  #nav_toggle:checked ~ #navigation_list {
+    display: block;
+  }
+}
 
 
   
